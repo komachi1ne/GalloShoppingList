@@ -13,5 +13,5 @@ Configurar o Router:
     - package.json
     - app.json
 
-    
+    npm i
     npx expo start --localhost --android

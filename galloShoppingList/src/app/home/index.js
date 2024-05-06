@@ -1,14 +1,9 @@
 import {
-  StyleSheet,
-  Text,
-  View,
-  SafeAreaView,
-  ImageBackground,
-  TextInput,
-  TouchableOpacity
+  Text, View, SafeAreaView, ImageBackground, TextInput, TouchableOpacity
 } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { Ionicons } from '@expo/vector-icons';
+import { styles } from './style';
 
 export default function Home() {
   return (
@@ -20,13 +15,23 @@ export default function Home() {
       >
         <View style={styles.header}>
           <Text style={styles.title}>Lista de Produtos</Text>
-          <Ionicons name="trash" size={32} color='#fff'/>
+          <Ionicons name="trash" size={32} color='#fff' />
         </View>
 
         {/* Lista de Produto */}
 
         <View style={styles.footer}>
-
+          <View style={styles.inputContainer}>
+            <TextInput
+              color= '#fff'
+              fontSize={18}
+              placeholderTextColor='#aeaeae'
+              placeholder='Digite o Nome do Produto...'
+            />
+          </View>
+          <TouchableOpacity style={styles.iconContainer}>
+            <Ionicons name='add' size={36} color='#fff'/>
+          </TouchableOpacity>
         </View>
 
       </ImageBackground>
@@ -35,4 +40,3 @@ export default function Home() {
   )
 }
 
-const styles = StyleSheet.create({})
