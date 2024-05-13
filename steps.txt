@@ -1,10 +1,13 @@
 Configuração da conta local do GIT:
+cd galloShoppingList 
 git config --global user.name komachi1ne
 git config --global user.email isabellevasconcelos862@gmail.com
+npm i
+npx expo start --localhost --android
 
+
+Criar:
 npx create-expo-app galloShoppingList
-
-cd galloShoppingList 
 
 EXPO ROUTER
 npx expo install expo-router react-native-safe-area-context react-native-screens expo-linking expo-constants expo-status-bar
@@ -13,5 +16,3 @@ Configurar o Router:
     - package.json
     - app.json
 
-    npm i
-    npx expo start --localhost --android
