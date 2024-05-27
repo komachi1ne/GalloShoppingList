@@ -3,7 +3,7 @@ import { styles } from './style'
 import { Ionicons } from '@expo/vector-icons'
 import { View, Text, TouchableOpacity } from 'react-native'
 
-export default function ItemList({ item, markItem, unmarkItem, removeItem }) {
+export default function ItemList({item, markItem, unmarkItem, removeItem}) {
   return (
     <View style={styles.itemList}>
       <View style={{ flex: 1 }}>
@@ -11,26 +11,18 @@ export default function ItemList({ item, markItem, unmarkItem, removeItem }) {
           {item?.name}
         </Text>
       </View>
+      
       {!item.bought ? (
-        <TouchableOpacity
-          style={styles.actionIcon}
-          onPress={() => markItem(item)}
-        >
-          <Ionicons name='bag-check-outline' size={24} color="#fff" />
-        </TouchableOpacity>
+        <TouchableOpacity style={styles.actionIcon} onPress={() => markItem(item.id)}>
+        <Ionicons name='bag-check-outline' size={24} color="#fff" />
+      </TouchableOpacity>
       ) : (
-        <TouchableOpacity
-          style={styles.actionIcon}
-          onPress={() => unmarkItem(item)}
-        >
-          <Ionicons name='bag-remove-outline' size={24} color="#fff" />
+        <TouchableOpacity style={styles.actionIcon} onPress={() => unmarkItem(item.id)}>
+        <Ionicons name='bag-remove-outline' size={24} color="#fff" />
         </TouchableOpacity>
       )}
-
-      <TouchableOpacity
-        style={[styles.actionIcon, { backgroundColor: 'darkred' }]}
-        onPress={() => removeItem(item)}
-      >
+      
+      <TouchableOpacity style={[styles.actionIcon, { backgroundColor: 'darkred' }]} onPress={() => removeItem(item.id)}>
         <Ionicons name='trash-bin-outline' size={24} color="#fff" />
       </TouchableOpacity>
 
