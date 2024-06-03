@@ -98,7 +98,7 @@ export default function Home() {
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <ImageBackground source={require('../../assets/background.png')} resizeMode='repeat' style={{flex: 1, justifyContent: 'flex-start'}}>
+      <ImageBackground source={require('../../assets/background.jpg')} resizeMode='repeat' style={{flex: 1, justifyContent: 'flex-start'}}>
         
         <View style={styles.header}>
           <Text style={styles.title}>Lista de produtos</Text>
